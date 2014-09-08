@@ -1,0 +1,65 @@
+.form-container {
+	display: table-cell;
+	vertical-align: middle;
+	form {
+		background: rgba($charcoal, .4);
+		width: 100%;
+		height: auto;
+		border: 1px solid $charcoal;
+		@include pad(10px 10px);
+		@include box-sizing(border-box);
+		div {
+			float: right;
+			height: 40px;
+			@include box-sizing(border-box);
+			display: table;
+			a {
+				display: table-cell;
+				vertical-align: middle;
+				color: $carrot;
+				@include transition(all .3s ease-in-out);
+				&:hover {
+					color: darken($carrot, 15%);
+				}
+			}
+		}
+		@include mq(iphone) {
+			position: relative;
+			left: 50%;
+			width: 320px;
+			margin-left: -160px;
+		}
+	}
+}
+
+// INPUTS
+input[type="text"], input[type="password"], input[type="submit"], textarea {
+	background: transparent;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	@include placeholder {
+    color: $cream;
+  }
+	&:focus {
+		box-shadow: none;
+		color: $cream;
+	}
+}
+input[type="submit"] {
+	background: darken($green, 5%);
+	@include transition(all .3s ease-in-out);
+	&:hover {
+		background: darken($green, 10%);
+	}
+}
+
+textarea {
+	background: rgba($charcoal, .4);
+}
+
+// WEBKIT AUTOFILL
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px $charcoal inset !important;
+	-webkit-text-fill-color: $cream!important;
+}

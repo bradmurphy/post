@@ -1,0 +1,33 @@
+nav {
+	float: left;
+	width: 50%;
+	padding-top: 20px;
+	ul {
+		width: 100%;
+		li {
+			display: inline;
+			padding: 0 10px;
+			a {
+				color: $carrot;
+				@include transition(all .3s ease-in-out);
+				&:hover {
+					color: darken($carrot, 15%);
+				}
+			}
+		}
+	}
+}
+
+.session-container {
+	float: left;
+	width: 50%;
+}
+
+.user-session {
+	float: right;
+	width: 50%;
+	display: table;
+	height: 70px;
+	clear: both;
+}
+
